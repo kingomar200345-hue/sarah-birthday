@@ -6,6 +6,10 @@ This is a polished static birthday website for Sarah, also called Sasosktty, mad
 
 The 14 birthday photos are connected to the website as `assets/sarah-01.jpeg` through `assets/sarah-14.jpeg`. The original WhatsApp files are still in the folder too, but the website uses the cleaner `sarah-*` filenames.
 
+## Song
+
+The romantic music button uses `assets/song.mp4`. Phone browsers usually block automatic audio, so Sarah starts the song by tapping `Press here, Sasosktty`.
+
 ## Edit The Text
 
 Open `index.html` in Visual Studio Code if you want to change any message. Good places to personalize first:

@@ -1,6 +1,9 @@
 const canvas = document.querySelector(".sparkle-canvas");
 const context = canvas.getContext("2d");
 const wishButton = document.querySelector(".wish-button");
+const musicButton = document.querySelector(".music-button");
+const musicNote = document.querySelector(".music-note");
+const birthdaySong = document.querySelector(".birthday-song");
 const imageNodes = document.querySelectorAll("img");
 
 let width = 0;
@@ -88,6 +91,30 @@ function replaceMissingImage(image) {
   image.replaceWith(fallback);
 }
 
+function setMusicState(isPlaying) {
+  musicButton.classList.toggle("is-playing", isPlaying);
+  musicButton.setAttribute("aria-pressed", String(isPlaying));
+  musicButton.textContent = isPlaying ? "Pause our song" : "Press here, Sasosktty";
+  musicNote.textContent = isPlaying
+    ? "This song is playing for you, Sarah."
+    : "A little song from Omar, waiting for your tap.";
+}
+
+async function toggleMusic() {
+  if (birthdaySong.paused) {
+    try {
+      await birthdaySong.play();
+      setMusicState(true);
+    } catch {
+      musicNote.textContent = "Tap once more to let your browser start the song.";
+    }
+    return;
+  }
+
+  birthdaySong.pause();
+  setMusicState(false);
+}
+
 imageNodes.forEach((image) => {
   image.addEventListener("error", () => replaceMissingImage(image), { once: true });
 });
@@ -98,6 +125,8 @@ window.addEventListener("resize", () => {
 });
 
 wishButton.addEventListener("click", releaseWish);
+musicButton.addEventListener("click", toggleMusic);
+birthdaySong.addEventListener("ended", () => setMusicState(false));
 
 resizeCanvas();
 resetSparkles();
