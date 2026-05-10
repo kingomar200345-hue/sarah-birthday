@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1500" role="img" aria-label="Birthday photo placeholder">
+  <defs>
+    <linearGradient id="sky" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#f58aa6"/>
+      <stop offset="0.5" stop-color="#ffb06f"/>
+      <stop offset="1" stop-color="#94e2c7"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="38%" r="52%">
+      <stop offset="0" stop-color="#fff8dd" stop-opacity="0.88"/>
+      <stop offset="0.45" stop-color="#fff8dd" stop-opacity="0.18"/>
+      <stop offset="1" stop-color="#10151f" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="1500" fill="#10151f"/>
+  <rect width="1200" height="1500" fill="url(#sky)" opacity="0.52"/>
+  <rect width="1200" height="1500" fill="url(#glow)"/>
+  <path d="M0 1040c150-86 292-94 426-24 126 66 253 64 381-6 135-74 266-62 393 36v454H0z" fill="#080b10" opacity="0.5"/>
+  <g opacity="0.55" fill="#fff8dd">
+    <circle cx="212" cy="256" r="9"/>
+    <circle cx="1003" cy="330" r="7"/>
+    <circle cx="871" cy="188" r="5"/>
+    <circle cx="334" cy="508" r="6"/>
+    <circle cx="981" cy="724" r="9"/>
+    <circle cx="168" cy="780" r="5"/>
+    <circle cx="620" cy="292" r="8"/>
+    <circle cx="714" cy="612" r="5"/>
+  </g>
+  <g fill="none" stroke="#fff8dd" stroke-linecap="round" stroke-width="12" opacity="0.7">
+    <path d="M397 690c80-86 182-129 306-129 128 0 229 43 303 129"/>
+    <path d="M475 780c63 48 137 72 223 72 88 0 162-24 224-72"/>
+  </g>
+  <text x="600" y="1190" fill="#fff8dd" font-family="Arial, sans-serif" font-size="64" font-weight="700" text-anchor="middle">Add her photo</text>
+</svg>
